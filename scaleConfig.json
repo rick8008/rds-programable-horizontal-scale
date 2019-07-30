@@ -1,0 +1,30 @@
+[
+    {
+        "Name":"readreplica-1",
+        "Cicle":[
+            {
+                "Create":"07:00",
+                "Delete":"13:30",
+                "Option":["working week"]
+            }
+        ],
+        "DBInstanceClass":"db.t3.small",
+        "DBClusterIdentifier":"clusterproxysql",
+        "Engine":"aurora-mysql" ,
+        "Profile":"Default"
+    },
+    {
+        "Name":"readreplica-2",
+        "Cicle":[
+            {
+                "Create":"09:00",
+                "Delete":"09:30",
+                "Option":[2,4]
+            }
+        ],
+        "DBInstanceClass":"db.t3.small",
+        "DBClusterIdentifier":"clusterproxysql",
+        "Engine":"aurora-mysql" ,
+        "Profile":"Default"
+    }
+]
