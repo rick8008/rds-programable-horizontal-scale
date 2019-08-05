@@ -26,6 +26,9 @@ function executeThings($toExecute){
                 .' --db-instance-identifier '.$value['Name']
                 .' --db-instance-class '.$value['DBInstanceClass']
                 .' --engine '.$value['Engine'];
+                if($value['Region'] != null and $value['Region'] != '' ){
+                    $comand .= ' --availability-zone '.$value['Region']; 
+                }
             }elseif($value['status'] == 2){
                 $comand = '/usr/local/bin/aws rds start-db-instance'
                 .' --db-instance-identifier '.$value['Name'];

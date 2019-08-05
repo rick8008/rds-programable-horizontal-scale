@@ -11,7 +11,8 @@
         "DBInstanceClass":"db.t3.small",
         "DBClusterIdentifier":"clusterproxysql",
         "Engine":"aurora-mysql" ,
-        "Profile":"Default"
+        "Profile":"Default",
+        "Region":"us-east-1d"
     },
     {
         "Name":"readreplica-2",
@@ -25,6 +26,7 @@
         "DBInstanceClass":"db.t3.small",
         "DBClusterIdentifier":"clusterproxysql",
         "Engine":"aurora-mysql" ,
-        "Profile":"Default"
+        "Profile":"Default",
+        "Region":"us-east-1d"
     }
 ]
