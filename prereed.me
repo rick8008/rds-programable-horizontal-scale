@@ -1,0 +1,33 @@
+Pré requisitos 
+-- php
+-- aws cli  ("https://docs.aws.amazon.com/cli/latest/userguide/install-linux-al2017.html")
+-- adicione em seu crontab (* * * * * /usr/bin/php  {your_path}/rds-programable-horizontal-scale/main.php)
+
+
+
+
+Configuração
+
+editar arquivo {your_path}/rds-programable-horizontal-scale/scaleConfig.json 
+
+[
+    {
+        "Name":"readreplica-1",
+        "Cicle":[
+            {
+                "Create":"06:10",
+                "Delete":"20:11",
+                "Option":["working week"]
+            }
+        ],
+        "DBInstanceClass":"db.t3.small",
+        "DBClusterIdentifier":"primaldb-cluster",
+        "Engine":"aurora-mysql" ,
+        "Profile":"Default",
+        "Region":"us-east-1d"
+    }
+   
+]
+
+
+
